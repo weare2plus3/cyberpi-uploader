@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+- Icon and Marketplace banner in the TWO+THREE style.
+- README: install from the Visual Studio Marketplace.
+
 ## 0.2.0
 - First public release under TWO+THREE (publisher `weare2plus3`).
 - Tests use the project's own example programs and an independent Python reference encoder.

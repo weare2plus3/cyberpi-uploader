@@ -2,8 +2,13 @@
   "name": "cyberpi-uploader",
   "displayName": "CyberPi Uploader",
   "description": "Upload Python programs to a Makeblock CyberPi / mBot2 over USB from VS Code on macOS, without mBlock. Includes a serial monitor for print() output.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "weare2plus3",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#151413",
+    "theme": "dark"
+  },
   "author": {
     "name": "TWO+THREE",
     "url": "https://2plus3.studio"

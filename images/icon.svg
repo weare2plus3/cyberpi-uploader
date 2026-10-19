@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="256" height="256">
+  <!-- TWO+THREE design system: ink ground, paper line drawing (1.5 stroke, square ends), one signal accent -->
+  <rect width="24" height="24" fill="#151413"/>
+  <g fill="none" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- the board, top edge opened around the arrow -->
+    <path stroke="#f5f2ea" d="M9.75 10.25H4.75V19.25H19.25V10.25H14.25"/>
+    <!-- two buttons -->
+    <path stroke="#f5f2ea" d="M7.75 16.25H8.25 M15.75 16.25H16.25"/>
+    <!-- upload arrow in signal -->
+    <path stroke="#a3bb9e" d="M12 16.25V4.25 M8.75 7.5L12 4.25L15.25 7.5"/>
+  </g>
+</svg>

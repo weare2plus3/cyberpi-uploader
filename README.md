@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/weare2plus3/cyberpi-uploader/main/images/icon.png" width="96" alt="">
+
 # CyberPi Uploader
 
 Upload Python programs from VS Code to a Makeblock **CyberPi** (the brain of the **mBot2**) over USB on macOS, with no mBlock, mLink or Python install needed.
@@ -5,7 +7,9 @@ Upload Python programs from VS Code to a Makeblock **CyberPi** (the brain of the
 By [TWO+THREE](https://2plus3.studio).
 
 ## Install
-Download the latest `.vsix` from [Releases](https://github.com/weare2plus3/cyberpi-uploader/releases). In VS Code, open the Extensions panel, click **⋯**, choose **Install from VSIX…** and pick the file.
+In VS Code, open the Extensions panel (⇧⌘X), search for **CyberPi Uploader** and click **Install**. Or install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=weare2plus3.cyberpi-uploader).
+
+To install without the Marketplace, download the `.vsix` from [Releases](https://github.com/weare2plus3/cyberpi-uploader/releases). Then open the Extensions panel, click **⋯**, choose **Install from VSIX…** and pick the file.
 
 ## Use
 1. Plug the CyberPi into your Mac with a **data** USB cable and switch it on. Quit mBlock 5 first, because it holds the port.

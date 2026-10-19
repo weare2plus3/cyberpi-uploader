@@ -11,3 +11,4 @@ node_modules/@serialport/bindings-cpp/src/**
 node_modules/@serialport/bindings-cpp/binding.gyp
 node_modules/**/*.md
 .github/**
+images/icon.svg
