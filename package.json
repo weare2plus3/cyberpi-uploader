@@ -20,9 +20,6 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "os": [
-    "darwin"
-  ],
   "categories": [
     "Programming Languages",
     "Education",
