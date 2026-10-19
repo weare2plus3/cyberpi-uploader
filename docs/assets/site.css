@@ -19,9 +19,7 @@ p code, p kbd, dd code { font-size: 0.875em; padding: 0 var(--space-1); backgrou
 /* Header: the design system's Header, kept on screen while you scroll. */
 .s-header { position: sticky; top: 0; z-index: 10; }
 .s-header .tt-header { transition: box-shadow 0.2s ease; }
-.s-brand { display: flex; align-items: center; gap: var(--space-3); color: var(--ink); text-decoration: none; line-height: 1; }
-.s-brand img { width: 40px; height: 40px; }
-.s-brand .numeral { padding-top: var(--space-1); }
+.s-brand img { width: 44px; height: 44px; }
 .s-header .tt-header-action { margin-left: auto; }
 .s-header .tt-header-nav + .tt-header-action { margin-left: 0; }
 

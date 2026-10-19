@@ -76,12 +76,11 @@ const faqs = [
 const page = h("div", { className: "s-page", id: "top" },
   h("a", { href: "#main", className: "s-skip label" }, "Skip to content"),
   // Same structure and classes as the design system's Header, with the product's
-  // icon and name in place of the studio logo (the TWO+THREE logo is in the footer).
+  // icon in place of the studio logo (the TWO+THREE logo is in the footer).
   h("div", { className: "s-header", "data-header": "" },
     h("header", { className: "tt-header" },
       h("a", { href: "#top", className: "tt-header-logo s-brand", "aria-label": "CyberPi Uploader, back to top" },
-        h("img", { src: "assets/icon.png", alt: "", width: 40, height: 40 }),
-        h("span", { className: "numeral" }, "CyberPi Uploader")),
+        h("img", { src: "assets/icon.png", alt: "", width: 44, height: 44 })),
       h("nav", { "aria-label": "Main", className: "tt-header-nav" },
         [["How it works", "#how"], ["Help", "#help"], ["GitHub", REPO]].map(([label, href]) =>
           h("a", { key: label, href, className: "tt-header-link" }, label))),
