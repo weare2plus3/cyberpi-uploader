@@ -17,7 +17,7 @@ const pkg = require(path.join(root, "package.json"));
 // Load the design system bundle the way a browser would: it reads window.React.
 const sandbox = { window: { React } };
 vm.runInNewContext(fs.readFileSync(path.join(root, "docs/assets/ds/bundle.js"), "utf8"), sandbox);
-const { Header, Button, Card, Tag, Icon, Logo } = sandbox.window.TwoPlusThree;
+const { Button, Card, Tag, Icon, Logo } = sandbox.window.TwoPlusThree;
 const h = React.createElement;
 
 const MARKETPLACE = "https://marketplace.visualstudio.com/items?itemName=weare2plus3.cyberpi-uploader";
@@ -73,26 +73,26 @@ const faqs = [
   ["Does it work on Windows or Linux?", "Not yet. It's built and tested for macOS."],
 ];
 
-const page = h("div", { className: "s-page" },
+const page = h("div", { className: "s-page", id: "top" },
   h("a", { href: "#main", className: "s-skip label" }, "Skip to content"),
+  // Same structure and classes as the design system's Header, with the product's
+  // icon and name in place of the studio logo (the TWO+THREE logo is in the footer).
   h("div", { className: "s-header", "data-header": "" },
-    h(Header, {
-      logoHref: STUDIO,
-      nav: [
-        { label: "How it works", href: "#how" },
-        { label: "Help", href: "#help" },
-        { label: "GitHub", href: REPO },
-      ],
-      action: h(Button, { variant: "secondary", size: "sm", href: MARKETPLACE }, "Install"),
-    })),
+    h("header", { className: "tt-header" },
+      h("a", { href: "#top", className: "tt-header-logo s-brand", "aria-label": "CyberPi Uploader, back to top" },
+        h("img", { src: "assets/icon.png", alt: "", width: 40, height: 40 }),
+        h("span", { className: "numeral" }, "CyberPi Uploader")),
+      h("nav", { "aria-label": "Main", className: "tt-header-nav" },
+        [["How it works", "#how"], ["Help", "#help"], ["GitHub", REPO]].map(([label, href]) =>
+          h("a", { key: label, href, className: "tt-header-link" }, label))),
+      h("div", { className: "tt-header-action" },
+        h(Button, { variant: "secondary", size: "sm", href: MARKETPLACE }, "Install")))),
 
   h("main", { id: "main" },
     // Hero
     h("section", { className: "s-hero" },
       h("div", { className: "s-hero-copy" },
-        h("div", { className: "s-eyebrow-row" },
-          h("img", { src: "assets/icon.png", alt: "", width: 48, height: 48, className: "s-app-icon" }),
-          h("span", { className: "label s-muted" }, "VS Code extension for Mac")),
+        h("span", { className: "label s-muted" }, "VS Code extension for Mac"),
         h("h1", { className: "display-xl s-title" }, "CyberPi uploader"),
         h("p", { className: "body-lg s-lead" },
           "Write Python for your Makeblock CyberPi and mBot2 in VS Code, then send it to the robot with one keystroke. No mBlock, no mLink, nothing else to install."),

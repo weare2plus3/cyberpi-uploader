@@ -19,6 +19,9 @@ p code, p kbd, dd code { font-size: 0.875em; padding: 0 var(--space-1); backgrou
 /* Header: the design system's Header, kept on screen while you scroll. */
 .s-header { position: sticky; top: 0; z-index: 10; }
 .s-header .tt-header { transition: box-shadow 0.2s ease; }
+.s-brand { display: flex; align-items: center; gap: var(--space-3); color: var(--ink); text-decoration: none; line-height: 1; }
+.s-brand img { width: 40px; height: 40px; }
+.s-brand .numeral { padding-top: var(--space-1); }
 .s-header .tt-header-action { margin-left: auto; }
 .s-header .tt-header-nav + .tt-header-action { margin-left: 0; }
 
@@ -27,8 +30,6 @@ main, .s-footer { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-8); 
 /* Hero */
 .s-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--space-12); align-items: center; padding: var(--space-16) 0; }
 .s-hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6); }
-.s-eyebrow-row { display: flex; align-items: center; gap: var(--space-3); }
-.s-app-icon { width: 48px; height: 48px; }
 .s-lead { max-width: 34em; }
 .s-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 .s-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
