@@ -1,0 +1,94 @@
+/* TWO+THREE — generated from tokens.json. Edit tokens.json (or the design system on claude.ai) and regenerate; don't edit by hand. */
+/* Light is the default. Dark applies with [data-theme="dark"] on <html>, or automatically from the system setting unless [data-theme="light"] is set. */
+
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@500;600&family=Instrument+Sans:wght@400;600&display=swap");
+
+:root, [data-theme="light"] {
+  --paper: #f5f2ea;
+  --paper-raised: #ffffff;
+  --ink: #151413;
+  --ink-muted: #5c5850;
+  --line: #d8d3c7;
+  --signal: #779371;
+  --signal-text: #526e4e;
+  --on-signal: #151413;
+  --ochre: #d9a441;
+  --focus-ring: var(--ink);
+  --danger: #a8341c;
+  --scrim: #1514138c;
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px #1514130f, 0 1px 3px #1514130a;
+  --shadow-2: 0 2px 4px #15141314, 0 6px 16px #1514130f;
+  --shadow-3: 0 4px 8px #15141314, 0 12px 28px #1514131f;
+  --shadow-4: 0 8px 16px #1514131a, 0 24px 56px #15141333;
+}
+
+[data-theme="dark"] {
+  --paper: #111110;
+  --paper-raised: #1c1b19;
+  --ink: #f2eee5;
+  --ink-muted: #a6a198;
+  --line: #35332f;
+  --signal: #a3bb9e;
+  --signal-text: #a3bb9e;
+  --on-signal: #151413;
+  --ochre: #e2b45a;
+  --focus-ring: var(--ink);
+  --danger: #f2846b;
+  --scrim: #000000b3;
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px #00000066;
+  --shadow-2: 0 2px 6px #00000080, 0 6px 16px #00000059;
+  --shadow-3: 0 4px 10px #00000099, 0 12px 28px #00000080;
+  --shadow-4: 0 8px 20px #000000a6, 0 24px 56px #0000008c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111110;
+    --paper-raised: #1c1b19;
+    --ink: #f2eee5;
+    --ink-muted: #a6a198;
+    --line: #35332f;
+    --signal: #a3bb9e;
+    --signal-text: #a3bb9e;
+    --on-signal: #151413;
+    --ochre: #e2b45a;
+    --focus-ring: var(--ink);
+    --danger: #f2846b;
+    --scrim: #000000b3;
+    --shadow-0: none;
+    --shadow-1: 0 1px 2px #00000066;
+    --shadow-2: 0 2px 6px #00000080, 0 6px 16px #00000059;
+    --shadow-3: 0 4px 10px #00000099, 0 12px 28px #00000080;
+    --shadow-4: 0 8px 20px #000000a6, 0 24px 56px #0000008c;
+  }
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-pill: 999px;
+  --font-display: "Teko", "Arial Narrow", sans-serif;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Type styles */
+.display-xl { font-family: var(--font-display); font-size: 104px; line-height: 0.88; font-weight: 600; letter-spacing: 0.005em; }
+.display { font-family: var(--font-display); font-size: 64px; line-height: 0.92; font-weight: 600; letter-spacing: 0.005em; }
+.heading { font-family: var(--font-display); font-size: 36px; line-height: 1; font-weight: 500; letter-spacing: 0.01em; }
+.numeral { font-family: var(--font-display); font-size: 28px; line-height: 1; font-weight: 500; letter-spacing: 0.02em; }
+.body-lg { font-family: var(--font-sans); font-size: 19px; line-height: 1.5; font-weight: 400; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 1.55; font-weight: 400; }
+.label { font-family: var(--font-sans); font-size: 13px; line-height: 1.4; font-weight: 600; letter-spacing: 0.06em; }
+.code { font-family: var(--font-mono); font-size: 14px; line-height: 1.5; font-weight: 400; }
+.display-xl, .numeral, .label { text-transform: uppercase; }

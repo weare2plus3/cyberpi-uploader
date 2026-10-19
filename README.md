@@ -4,7 +4,7 @@
 
 Upload Python programs from VS Code to a Makeblock **CyberPi** (the brain of the **mBot2**) over USB on macOS, with no mBlock, mLink or Python install needed.
 
-By [TWO+THREE](https://2plus3.studio).
+By [TWO+THREE](https://2plus3.studio) · [Website](https://weare2plus3.github.io/cyberpi-uploader/)
 
 ## Install
 In VS Code, open the Extensions panel (⇧⌘X), search for **CyberPi Uploader** and click **Install**. Or install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=weare2plus3.cyberpi-uploader).
@@ -77,7 +77,10 @@ npm install
 npm run compile
 npm test           # protocol tests + end-to-end uploads to a simulated CyberPi (needs python3)
 npx vsce package   # builds the .vsix
+npm run site       # rebuilds the website in docs/ from site/build.js
 ```
+
+The website is pre-rendered from the TWO+THREE design system's components (copied into `docs/assets/ds/`) and served by GitHub Pages from `docs/`.
 
 The tests check every frame against an independent Python encoder (`test-fixtures/reference_encoder.py`) and against bytes mBlock 5 sends. They also run full uploads, including a dropped acknowledgement, against a simulated board on a pseudo-terminal.
 

@@ -1,0 +1,103 @@
+/* CyberPi Uploader site. Layout only: every colour, space, size and radius comes
+   from the TWO+THREE design system (ds/tokens.css, ds/bundle.css). */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, dl, dd, figure, pre { margin: 0; }
+a { color: var(--signal-text); text-underline-offset: 4px; }
+a:focus-visible, .s-copy:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+img { display: block; max-width: 100%; }
+code, kbd { font-family: var(--font-mono); }
+p code, p kbd, dd code { font-size: 0.875em; padding: 0 var(--space-1); background: var(--paper-raised); border: 1px solid var(--line); color: var(--ink); white-space: nowrap; }
+
+.s-muted { color: var(--ink-muted); }
+.s-skip { position: absolute; left: var(--space-4); top: -100px; z-index: 20; padding: var(--space-3) var(--space-4); background: var(--paper-raised); color: var(--ink); border: 1px solid var(--ink); }
+.s-skip:focus { top: var(--space-4); }
+
+/* Header: the design system's Header, kept on screen while you scroll. */
+.s-header { position: sticky; top: 0; z-index: 10; }
+.s-header .tt-header { transition: box-shadow 0.2s ease; }
+.s-header .tt-header-action { margin-left: auto; }
+.s-header .tt-header-nav + .tt-header-action { margin-left: 0; }
+
+main, .s-footer { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-8); }
+
+/* Hero */
+.s-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--space-12); align-items: center; padding: var(--space-16) 0; }
+.s-hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-6); }
+.s-eyebrow-row { display: flex; align-items: center; gap: var(--space-3); }
+.s-app-icon { width: 48px; height: 48px; }
+.s-lead { max-width: 34em; }
+.s-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.s-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.s-hero-demo { display: flex; flex-direction: column; gap: var(--space-4); }
+
+/* Code panels */
+.s-code { background: var(--paper-raised); border: 1px solid var(--line); min-width: 0; }
+.s-code-bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-height: 48px; padding: 0 var(--space-4); border-bottom: 1px solid var(--line); }
+.s-code pre { padding: var(--space-6); overflow-x: auto; color: var(--ink); }
+.s-copy { min-height: 36px; }
+
+/* Sections */
+.s-section { padding: var(--space-16) 0; border-top: 1px solid var(--line); }
+.s-section-head { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-12); max-width: 760px; }
+.s-intro { max-width: 36em; }
+.s-note { margin-top: var(--space-12); max-width: 44em; }
+
+/* Steps: three Cards in a row */
+.s-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+.s-cards > li { display: flex; }
+.s-cards .tt-card { flex: 1; }
+
+/* Features and protocol steps: hairline rows */
+.s-features, .s-protocol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-12) var(--space-8); margin: 0; padding: 0; list-style: none; }
+.s-protocol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.s-feature { display: flex; gap: var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--line); }
+.s-feature .tt-icon { margin-top: var(--space-1); }
+.s-feature > div, .s-protocol-step { display: flex; flex-direction: column; gap: var(--space-3); }
+.s-protocol-step { padding-top: var(--space-6); border-top: 1px solid var(--line); }
+
+/* First program */
+.s-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-12); align-items: start; }
+.s-split-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+
+/* Help */
+.s-faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-8) var(--space-12); }
+.s-faq dt { padding-top: var(--space-6); border-top: 1px solid var(--line); }
+.s-faq dd { padding-top: var(--space-6); border-top: 1px solid var(--line); }
+
+/* Footer */
+.s-footer { display: grid; grid-template-columns: 1fr auto; gap: var(--space-8); padding-top: var(--space-12); padding-bottom: var(--space-12); border-top: 1px solid var(--line); }
+.s-footer-brand { display: flex; flex-direction: column; gap: var(--space-4); }
+.s-footer-logo { display: inline-block; line-height: 0; align-self: flex-start; }
+.s-footer-nav { display: flex; flex-wrap: wrap; align-content: flex-start; gap: var(--space-3) var(--space-6); }
+.s-footer-nav a { color: var(--ink); text-decoration: none; padding: var(--space-1) 0; border-bottom: 2px solid transparent; }
+.s-footer-nav a:hover { border-bottom-color: var(--ink); }
+.s-legal { grid-column: 1 / -1; font-size: 13px; line-height: 1.4; }
+
+/* Tablet */
+@media (max-width: 960px) {
+  .s-hero, .s-split { grid-template-columns: minmax(0, 1fr); }
+  .s-cards, .s-protocol { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+}
+
+/* Phone */
+@media (max-width: 640px) {
+  main, .s-footer { padding: 0 var(--space-4); }
+  .s-footer { padding-top: var(--space-12); padding-bottom: var(--space-12); grid-template-columns: minmax(0, 1fr); }
+  /* On phones the header wraps, so it scrolls away and leaves Install to the hero. */
+  .s-header { position: static; }
+  .s-header .tt-header-action { display: none; }
+  .s-header .tt-header { padding: var(--space-3) var(--space-4); }
+  html { scroll-padding-top: 0; }
+  .s-hero { padding: var(--space-12) 0; }
+  /* display-xl drops to the display size; display to heading. */
+  .s-title { font-size: 64px; line-height: 0.92; }
+  .s-section-head .display { font-size: 36px; line-height: 1; }
+  .s-features, .s-faq { grid-template-columns: minmax(0, 1fr); }
+  .s-faq { gap: 0; }
+  .s-faq dd { border-top: 0; padding-top: var(--space-3); padding-bottom: var(--space-6); }
+  .s-section { padding: var(--space-12) 0; }
+}
