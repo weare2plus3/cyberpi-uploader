@@ -1,0 +1,148 @@
+{
+  "name": "cyberpi-uploader",
+  "displayName": "CyberPi Uploader",
+  "description": "Upload Python programs to a Makeblock CyberPi / mBot2 over USB from VS Code on macOS, without mBlock. Includes a serial monitor for print() output.",
+  "version": "0.2.0",
+  "publisher": "weare2plus3",
+  "author": {
+    "name": "TWO+THREE",
+    "url": "https://2plus3.studio"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/weare2plus3/cyberpi-uploader#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weare2plus3/cyberpi-uploader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weare2plus3/cyberpi-uploader/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "categories": [
+    "Programming Languages",
+    "Education",
+    "Other"
+  ],
+  "keywords": [
+    "cyberpi",
+    "mbot2",
+    "makeblock",
+    "micropython",
+    "upload"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "cyberpi.upload",
+        "title": "Upload Current File",
+        "category": "CyberPi",
+        "icon": "$(cloud-upload)"
+      },
+      {
+        "command": "cyberpi.selectPort",
+        "title": "Select USB Port",
+        "category": "CyberPi"
+      },
+      {
+        "command": "cyberpi.toggleMonitor",
+        "title": "Start / Stop Serial Monitor",
+        "category": "CyberPi"
+      },
+      {
+        "command": "cyberpi.restart",
+        "title": "Restart Board",
+        "category": "CyberPi"
+      },
+      {
+        "command": "cyberpi.newScript",
+        "title": "New Script",
+        "category": "CyberPi"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cyberpi.upload",
+        "key": "ctrl+alt+u",
+        "mac": "cmd+alt+u",
+        "when": "editorLangId == python"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "cyberpi.upload",
+          "when": "resourceLangId == python",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "cyberpi.upload",
+          "when": "resourceLangId == python",
+          "group": "navigation@99"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "CyberPi",
+      "properties": {
+        "cyberpi.port": {
+          "type": "string",
+          "default": "",
+          "description": "USB serial port of the CyberPi, e.g. /dev/cu.usbserial-110. Leave empty to auto-detect."
+        },
+        "cyberpi.restartAfterUpload": {
+          "type": "boolean",
+          "default": true,
+          "description": "Restart the CyberPi after uploading so the new program runs."
+        },
+        "cyberpi.monitorAfterUpload": {
+          "type": "boolean",
+          "default": true,
+          "description": "Keep the port open after uploading and show the program's print() output in the CyberPi output panel."
+        },
+        "cyberpi.padUploads": {
+          "type": "boolean",
+          "default": true,
+          "description": "Pad the file with trailing newlines so it is sent in exactly the block layout mBlock uses (recommended)."
+        },
+        "cyberpi.bootWaitSeconds": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 15,
+          "description": "Seconds to wait after opening the port (which restarts the board) before uploading."
+        },
+        "cyberpi.warnWithoutEventStart": {
+          "type": "boolean",
+          "default": true,
+          "description": "Warn before uploading a file with no @event handler."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p .",
+    "test": "node out/test/protocol.test.js && node out/test/e2e.test.js",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "serialport": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "~1.85.0",
+    "typescript": "^5.6.0",
+    "@vscode/vsce": "^3.2.0"
+  }
+}
